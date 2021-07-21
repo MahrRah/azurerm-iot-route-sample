@@ -17,9 +17,9 @@ provider "azurerm" {
 }
 
 locals {
-  resource_prefix             = "ex2"
-  resource_group_name         = "azurerm-iot-example-test2"
-  resource_group_location     = "westeurope"
+  resource_prefix         = "ex2"
+  resource_group_name     = "azurerm-iot-example-test2"
+  resource_group_location = "westeurope"
 }
 
 resource "azurerm_resource_group" "example" {
@@ -80,9 +80,9 @@ resource "azurerm_iothub_route" "example" {
 resource "azurerm_iothub_route" "example1" {
   resource_group_name = local.resource_group_name
   iothub_name         = azurerm_iothub.example.name
-  name           = "defaultroute"
-  source         = "DeviceMessages"
-  condition      = "true"
-  endpoint_names = ["events"]
-  enabled        = true
+  name                = "defaultroute"
+  source              = "DeviceMessages"
+  condition           = "true"
+  endpoint_names      = ["events"]
+  enabled             = true
 }

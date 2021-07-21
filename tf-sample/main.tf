@@ -17,9 +17,9 @@ provider "azurerm" {
 }
 
 locals {
-  resource_prefix             = "ex"
-  resource_group_name         = "azurerm-iot-example"
-  resource_group_location     = "westeurope"
+  resource_prefix         = "ex"
+  resource_group_name     = "azurerm-iot-example"
+  resource_group_location = "westeurope"
 }
 
 resource "azurerm_resource_group" "example" {
